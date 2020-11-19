@@ -1,0 +1,402 @@
+:root {
+    --orange: #ff8103;
+    --white: #ffffff;
+    --gray: #444444;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0;
+}
+
+.navigation {
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 2rem 0 0;
+    height: 100%;
+    padding: 0;
+}
+.navigation ul li {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.navigation ul .active {
+    background-color: var(--orange);
+}
+
+.navigation ul .active a {
+    color: #fff;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--orange);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/***** Login page *****/
+
+.login-form {
+    font-size: 1.15rem;
+    width: 15%;
+}
+
+.login-form .form-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-form label {
+    justify-self: flex-start;
+    align-self: center;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.33rem 0.67rem;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
+
+.login-form .actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-form-conatainer {
+    box-sizing: border-box;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.login-form-conatainer .form-group,
+.login-form-conatainer .actions {
+    margin-top: 0.5rem;
+}
+
+/***** Articles page *****/
+.articles {
+    margin: 0 2rem;
+}
+
+.articles .actions-container {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article .actions a {
+    text-decoration: none;
+    color: var(--orange);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.articles .actions-container h3 {
+    margin: 0;
+}
+
+.articles-container {
+    width: 67%;
+    margin: 2rem auto 0 auto;
+}
+
+.form-group label {
+    color: var(--orange);
+    display: flex;
+    min-width: 3.67rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.articles-list hr {
+    margin: 0;
+    /*border: 1px solid #666;*/
+    border-color: #bbb;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.article .title p {
+    font-family: sans-serif;
+    margin: 0.67rem 0 0.67rem 0.25rem;
+    font-size: 1.1rem;
+}
+
+.article .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.article .actions .delete-icon {
+    color: #e74c3c;
+}
+.article .actions .edit-icon {
+    color:  #f1c40f;
+}
+
+.article .actions a {
+    margin-right: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.article i {
+    cursor: pointer;
+}
+
+/***** Single article *****/
+.article-container {
+    width: 50%;
+    margin: 0 auto;
+}
+.article-container h2,
+.article-container p {
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+.article-container .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 3rem;
+    border: none;
+}
+
+.article-container .navigation a {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 127, 0, 0.5);
+    color: var(--orange);
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-container h3,
+.article-container p {
+    font-family: sans-serif;
+}
+
+.images-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 20rem;
+    grid-gap: 1.5rem;
+}
+
+.images-grid .grid-item {
+    border: 1px solid #888;
+    background-color: var(--gray);
+}
+
+.images-grid .grid-item img {
+    width: 100%; /* or any custom size */
+    height: 100%;
+    object-fit: cover;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.pagination li {
+    background-color: var(--gray);
+    border-radius: 2px;
+    margin-right: 0.5rem;
+}
+.pagination li.active {
+    background-color: var(--orange);
+}
+.pagination li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+/***** Create / edit article *****/
+.create-conatiner {
+    width: 50%;
+    margin: 3rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-conatiner label {
+    display: block;
+    text-align: left;
+    color: var(--gray);
+    margin: 1rem 0 0.5rem 0;
+}
+
+.create-conatiner input,
+.create-conatiner textarea {
+    width: 100%;
+    padding: 0.33rem 0.67rem;
+    border: 1px solid #a8a8a8;
+}
+
+.create-conatiner textarea {
+    height: 5rem;
+}
+
+.create-conatiner form {
+    /*width: 30%;*/
+}
+
+.create-conatiner .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.create-conatiner .actions button {
+    /*height: 100%;*/
+}
+
+.create-conatiner .actions .images {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    align-items: center;
+}
+.create-conatiner .actions .images label {
+    margin: 0 0.5rem;
+}
+
+.create-conatiner .actions .images input {
+    border: 1px solid #ccc;
+    padding: 0.25rem 0.5rem;
+}
+
+.create-conatiner .edit-images-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 10rem;
+    /*grid-auto-columns: 20rem;*/
+    grid-gap: 1.5rem;
+}
+
+.edit-images-grid .grid-item {
+    border: 1px solid #888;
+    background-color: var(--gray);
+}
+
+.edit-images-grid .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-images-grid .grid-item form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.edit-images-grid .grid-item .delete-button {
+    width: 90%;
+    margin: 0.5rem auto 0 auto;
+}
+
+/***** General *****/
+.text-orange {
+    font-family: sans-serif;
+    color: var(--orange);
+}
+
+.link-btn {
+    font-family: sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 0.33rem 0.75rem;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+
+.btn-link {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: sans-serif;
+    /*input has OS specific font-family*/
+    color: var(--orange);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cancel-button {
+    height: 100%;
+}
+
+.actions .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.actions .buttons a {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
+.validation-errors {
+    background-color: rgba(255, 0, 0, 0.67);
+    font-family: sans-serif;
+}
+
+.validation-errors ul {
+    color: #fff;
+    padding: 0 2rem;
+}
